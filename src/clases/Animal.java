@@ -2,7 +2,7 @@ package clases;
 
 import java.util.Objects;
 
-public class Animal {
+public abstract class Animal {
 	private int idAnimal;
 	private String nombre;
 	private boolean chip; //Indica si tiene o no chip
@@ -95,5 +95,10 @@ public class Animal {
 		Animal other = (Animal) obj;
 		return chip == other.chip && idAnimal == other.idAnimal && Objects.equals(nombre, other.nombre);
 	}
+	
+	////////// OTROS METODOS //////////
+	public abstract void saludar();
+	public abstract void comer();
+	public abstract String beber();
 
 }
